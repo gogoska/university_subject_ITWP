@@ -33,8 +33,7 @@ p, li, td, nav, .address, caption, h2 {
 table {
     width: 70%;
     margin: 20px auto;
-    border-collapse: separate;
-    border-spacing: 3px; /* расстояние между границами ячеек 3 */
+    border-collapse: collapse;
     border: 5px solid black;
     background-color: white;
 }
@@ -54,13 +53,6 @@ td {
 caption {
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-/* Нумерованный список римскими цифрами */
-ol {
-    list-style-type: upper-roman;
-    margin-left: 30px;
-    padding-left: 20px;
 }
 
 nav {
