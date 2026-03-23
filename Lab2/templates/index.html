@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2 (Вариант 9)</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body>
+    <h1>Лабораторная работа 3 (Вариант 9)</h1>
+
+    <section>
+        <h2>Задание 1. Введите свою фамилию, имя и отчество</h2>
+        <button id="full_nameBtn">Ввести</button>
+    </section>
+
+    <section>
+        <h2>Задание 2. Вычисление гипотенузы</h2>
+        <button id="HypotenuzaBtn">Начать ввод</button>
+    </section>
+
+    <section>
+        <h2>Задание 2 (лаб. раб. №2). Площадь треугольника по координатам трёх точек</h2>
+        <p>Введите координаты точек A, B, C. При фокусе на любом поле площадь пересчитывается.</p>
+        <div class="coord-group">
+            <strong>Точка A</strong>
+            <label>x1: <input type="text" id="x1" size="5"></label>
+            <label>y1: <input type="text" id="y1" size="5"></label>
+        </div>
+        <div class="coord-group">
+            <strong>Точка B</strong>
+            <label>x2: <input type="text" id="x2" size="5"></label>
+            <label>y2: <input type="text" id="y2" size="5"></label>
+        </div>
+        <div class="coord-group">
+            <strong>Точка C</strong>
+            <label>x3: <input type="text" id="x3" size="5"></label>
+            <label>y3: <input type="text" id="y3" size="5"></label>
+        </div>
+        <div class="result-field" id="triangleAreaResult">Площадь: —</div>
+    </section>
+
+
+    <section>
+        <h2>Задание 3. Расстояние от точки до начала координат</h2>
+        <p>Введите координаты точки. Выделите текст в любом поле (событие Select), чтобы вычислить расстояние.</p>
+        <div class="inline-group">
+            <label>x: <input type="text" id="pointX" value="0" size="5"></label>
+            <label>y: <input type="text" id="pointY" value="0" size="5"></label>
+        </div>
+        <div class="result-field" id="distanceResult">Расстояние: —</div>
+    </section>
+
+    
+        <h2>Задание 4. Обмен значениями двух переменных</h2>
+        <p>Введите значения. При потере фокуса (Blur) на любом поле значения поменяются местами.</p>
+        <div class="inline-group">
+            <label>Переменная A: <input type="text" id="varA" value="" size="5"></label>
+            <label>Переменная B: <input type="text" id="varB" value="" size="5"></label>
+        </div>
+        <div class="result-field" id="swapResult">(значения поменяются при выходе из поля)</div>
+    </section>
+
+
+    <script>
+        function check_full_name() {
+            let surname = prompt("Фамилия");
+        
+            if (surname == null)
+            {
+                alert("Вход отменён");
+                return;
+            }
+            
+            let name = prompt("Имя");
+
+            if (name == null)
+            {
+                alert("Вход отменён");
+                return;
+            }
+
+            let second_name = prompt("Отчество");
+
+            if (second_name == null)
+            {
+                alert("Вход отменён");
+                return;
+            }
+
+            let full_name = surname + " " + name + " " + second_name
+
+            let result = confirm("Указаное ФИО (" + full_name + ") верно?")
+
+            if (result)
+            {
+                alert("Добрый день, " + full_name + "!")
+            }
+            else
+            {
+                alert("Попробуйте еще раз.")
+            }
+        }
+
+        const button = document.getElementById('full_nameBtn');
+        button.onclick = check_full_name;
+    </script>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
