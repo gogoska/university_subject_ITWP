@@ -1,0 +1,160 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 70px; /* чтобы контент не перекрывался фиксированным рекламным блоком */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ========== МЕНЮ ========== */
+.menu {
+    background: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 20;
+}
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.menu li {
+    margin: 0;
+}
+.menu a {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+.menu a:hover {
+    transform: scale(1.2);
+    background-color: #e67e22;
+    color: #fff;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ========== ОБТЕКАНИЕ (рисунок слева) ========== */
+.float-left {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ========== ТРИ КОЛОНКИ ========== */
+.three-columns {
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 1px solid #ddd;
+    text-align: justify;
+}
+.three-columns table,
+.three-columns figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* ========== ТАБЛИЦЫ ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background: #f0f0f0;
+}
+
+/* ========== ПОДПИСИ К РИСУНКАМ ========== */
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+/* ========== КОНТЕЙНЕР ДЛЯ DEMO RELATIVE/ABSOLUTE ========== */
+.relative-container {
+    position: relative;
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 30px 0;
+    border: 1px dashed #999;
+    min-height: 100px;
+}
+.absolute-demo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ========== РЕКЛАМНЫЙ БЛОК (FIXED, СНИЗУ) ========== */
+.ad-block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    color: #ffdd88;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-top: 2px solid #ffaa33;
+}
+.ad-block a {
+    color: #ffaa33;
+    text-decoration: none;
+    font-weight: bold;
+}
+.ad-block a:hover {
+    text-decoration: underline;
+}
+
+/* ========== ЗАГОЛОВКИ И ПРОЧЕЕ ========== */
+h1, h2, h3 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+}
+hr {
+    margin: 20px 0;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №10 - Вариант 4 | Страница 4: Margin</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li><a href="../templates/page4.html">Страница 4: Margin</a></li>
+            <li><a href="../templates/page5.html">Страница 5: Position</a></li>
+        </ul>
+    </div>
+
+    <h1>Свойство margin</h1>
+    <p><em>Вариант 4: обтекание рисунка слева, 3 колонки, рекламный блок снизу (fixed).</em></p>
+
+    <div class="relative-container">
+        <strong>Блок с position: relative</strong> (контейнер для абсолютного элемента)
+        <div class="absolute-demo">
+            absolute-блок (внутри relative)
+        </div>
+        <p>Этот блок имеет <code>position: relative;</code>, внутри него абсолютно позиционированный элемент (уголок с текстом).</p>
+    </div>
+
+    <div class="clearfix">
+        <div class="three-columns">
+            <h3>Краткая информация</h3>
+            <table>
+                <tr><th>Значение по умолчанию</th><td>0</td>
+                </tr>
+                <tr>
+                    <th>Наследуется</th>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <th>Применяется</th>
+                    <td>Ко всем элементам</td>
+                </tr>
+                <tr>
+                    <th>Ссылка на спецификацию</th>
+                    <td><a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin">http://www.w3.org/TR/CSS21/box.html#propdef-margin</a></td>
+                </tr>
+            </table>
+            <p><strong>Описание</strong><br>
+            Свойство <code>margin</code> задает поля (внешние отступы элемента) — отступы от внешней границы элемента до границ родительского элемента или до соседних элементов (см. рисунок блочной модели). Строчные элементы реагируют только на горизонтальные отступы.</p>
+            
+            <h3>Значения</h3>
+            <p>Разрешается использовать одно, два, три или четыре значения, разделяя их между собой пробелом:</p>
+            <ol>
+                <li>Поля будут установлены одинаково от каждого края элемента (margin: 10px).</li>
+                <li>Первое значение устанавливает поле от верхнего и нижнего края, второе — от левого и правого (margin: 5px 10px).</li>
+                <li>Первое значение задает поле от верхнего края, второе — одновременно от левого и правого края, а третье — от нижнего края (margin: 5px 10px 15px).</li>
+                <li>Четыре значения задают поля соответственно для верхнего, правого, нижнего и левого края (margin: 5px 10px 15px 20px).</li>
+            </ol>
+            <p>Возможные значения: ширина (px, em, %), auto (рассчитывается браузером).</p>
+            
+            <figure>
+                <img src="../static/img/image1.png" style="width:100%; max-width:150px; display:block; margin:10px;" class="float-left">
+                <figcaption>Рисунок 1 – Блочная модель (схематично)</figcaption>
+            </figure>
+            
+            <p>Использование margin позволяет управлять расстоянием между элементами, создавая воздушные макеты. При этом важно помнить о схлопывании вертикальных отступов (margin collapsing) у соседних блочных элементов. Для избежания неожиданных эффектов применяют padding или обертки.</p>
+            <p>В CSS3 появились новые возможности, такие как margin collapsing с флекс-контейнерами, но базовая концепция осталась неизменной. При адаптивной верстке чаще всего используются относительные единицы (%, em, rem), чтобы макет масштабировался корректно.</p>
+        </div>
+    </div>
+</div>
+
+<div class="ad-block">
+    🚀 <strong>Рекламный блок:</strong> Изучайте CSS глубже! <a href="#">Супер-курс по вёрстке</a> — скидка 30% по промокоду "CSSPRO" 🎓
+</div>
+
+</body>
+</html>
