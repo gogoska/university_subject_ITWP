@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Олимпиада — анкета участника (вар.9)</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Анкета участника Олимпиады</h1>
+        <p class="subtitle">6 задач. Баллы: 10, 20, 30 (0 — если не решена)</p>
+
+        <form id="olympiadForm">
+            <fieldset>
+                <legend>Информация об участнике</legend>
+                <div class="form-group">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" name="surname" placeholder="Иванов" required>
+                </div>
+                <div class="form-group">
+                    <label for="school">Номер школы:</label>
+                    <input type="number" id="school" name="school" min="1" max="9999" placeholder="123" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Результаты решения задач</legend>
+                <table class="tasks-table">
+                    <thead>
+                        <tr>
+                            <th>Задача</th>
+                            <th>0 баллов</th>
+                            <th>10 баллов</th>
+                            <th>20 баллов</th>
+                            <th>30 баллов</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Задача 1</td>
+                            <td><input type="radio" name="task1" value="0" checked></td>
+                            <td><input type="radio" name="task1" value="10"></td>
+                            <td><input type="radio" name="task1" value="20"></td>
+                            <td><input type="radio" name="task1" value="30"></td>
+                        </tr>
+                        <tr><td>Задача 2</td>
+                            <td><input type="radio" name="task2" value="0" checked></td>
+                            <td><input type="radio" name="task2" value="10"></td>
+                            <td><input type="radio" name="task2" value="20"></td>
+                            <td><input type="radio" name="task2" value="30"></td>
+                        </tr>
+                        <tr><td>Задача 3</td>
+                            <td><input type="radio" name="task3" value="0" checked></td>
+                            <td><input type="radio" name="task3" value="10"></td>
+                            <td><input type="radio" name="task3" value="20"></td>
+                            <td><input type="radio" name="task3" value="30"></td>
+                        </tr>
+                        <tr><td>Задача 4</td>
+                            <td><input type="radio" name="task4" value="0" checked></td>
+                            <td><input type="radio" name="task4" value="10"></td>
+                            <td><input type="radio" name="task4" value="20"></td>
+                            <td><input type="radio" name="task4" value="30"></td>
+                        </tr>
+                        <tr><td>Задача 5</td>
+                            <td><input type="radio" name="task5" value="0" checked></td>
+                            <td><input type="radio" name="task5" value="10"></td>
+                            <td><input type="radio" name="task5" value="20"></td>
+                            <td><input type="radio" name="task5" value="30"></td>
+                        </tr>
+                        <tr><td>Задача 6</td>
+                            <td><input type="radio" name="task6" value="0" checked></td>
+                            <td><input type="radio" name="task6" value="10"></td>
+                            <td><input type="radio" name="task6" value="20"></td>
+                            <td><input type="radio" name="task6" value="30"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <div class="buttons">
+                <button type="button" id="calcBtn" class="btn primary">Обработать анкету</button>
+                <button type="reset" id="resetBtn" class="btn secondary">Очистить</button>
+            </div>
+        </form>
+
+        <div id="resultBlock" class="result-card hidden">
+            <h2>Результат участника</h2>
+            <div class="result-content">
+                <p><strong>Фамилия:</strong> <span id="resSurname"></span></p>
+                <p><strong>Школа №:</strong> <span id="resSchool"></span></p>
+                <p><strong>Сумма баллов:</strong> <span id="resSum"></span></p>
+                <p><strong>Место:</strong> <span id="resPlace"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
