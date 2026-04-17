@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    background: linear-gradient(135deg, #2c3e50, #1a2632);
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 30px;         
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;                      
+    transform: rotate(180deg);
+    transition: visibility 0.1s;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.image-container {
+    margin-top: 60px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-image {
+    max-width: 80%;
+    max-height: 70vh;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s linear;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        gap: 15px;
+    }
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .arrow {
+        width: 18px;
+        height: 18px;
+        top: -22px;
+    }
+}

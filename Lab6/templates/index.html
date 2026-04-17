@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страны мира - интерактивное меню</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li data-country="russia">
+                <img src="../static/images/arrow.svg" class="arrow hide" alt="стрелка">
+                <a href="#">Россия</a>
+            </li>
+            <li data-country="usa">
+                <img src="../static/images/arrow.svg" class="arrow hide" alt="стрелка">
+                <a href="#">США</a>
+            </li>
+            <li data-country="france">
+                <img src="../static/images/arrow.svg" class="arrow hide" alt="стрелка">
+                <a href="#">Франция</a>
+            </li>
+            <li data-country="china">
+                <img src="../static/images/arrow.svg" class="arrow hide" alt="стрелка">
+                <a href="#">Китай</a>
+            </li>
+            <li data-country="brazil">
+                <img src="../static/images/arrow.svg" class="arrow hide" alt="стрелка">
+                <a href="#">Бразилия</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="image-container">
+        <img id="countryImage" class="country-image hidden" src="" alt="Изображение страны">
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
