@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №5 (Вариант 4)</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторная работа №5 <span>Вариант 4</span></h1>
+
+        <!-- ========== Блок 1: Определение знака зодиака ========== -->
+        <section class="zodiac-section">
+            <h2>Определение знака зодиака по дате рождения</h2>
+            <div class="zodiac-form">
+                <label for="birthDate">Выберите дату рождения:</label>
+                <input type="date" id="birthDate">
+                <button id="getZodiacBtn">Узнать знак</button>
+                <div id="zodiacResult" class="result-message"></div>
+            </div>
+        </section>
+
+        <!-- ========== Блок 2: Анкета сотрудников ========== -->
+        <section class="contracts-section">
+            <h2>Анкета сотрудников (10 человек)</h2>
+            <p>Заполните данные о сотрудниках: фамилия, дата заключения контракта, срок в годах.</p>
+            
+            <div class="table-wrapper">
+                <table id="employeesTable">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Фамилия</th>
+                            <th>Дата заключения контракта</th>
+                            <th>Срок (лет)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeesBody">
+                        <!-- 10 строк JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="action-buttons">
+                <button id="calculateBtn" class="primary">Рассчитать контракты</button>
+                <button id="resetBtn" class="secondary">Очистить форму</button>
+            </div>
+
+            <!-- Блок с результатами расчёта -->
+            <div id="resultsContainer" class="results-container hidden">
+                <h3>Результаты по контрактам</h3>
+                <div class="table-wrapper">
+                    <table id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Фамилия</th>
+                                <th>Дата начала</th>
+                                <th>Срок (лет)</th>
+                                <th>Дата окончания</th>
+                                <th>Месяц окончания</th>
+                                <th>День недели окончания</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody"></tbody>
+                    </table>
+                </div>
+
+                <!-- Фильтр по году окончания -->
+                <div class="filter-section">
+                    <label for="filterYear">Год окончания контракта:</label>
+                    <input type="number" id="filterYear" placeholder="например, 2026">
+                    <button id="filterBtn">Показать сотрудников</button>
+                    <div id="filterResult" class="filter-result"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
