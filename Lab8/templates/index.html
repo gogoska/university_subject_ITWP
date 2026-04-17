@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №8 (jQuery, вариант 1)</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Подключение jQuery из CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Лабораторная работа №8 (jQuery)</h1>
+    <h2>Вариант 1 – селекторы</h2>
+
+    <!-- Блок my_links -->
+    <div id="my_links">
+        <h3>Список ссылок</h3>
+        <ul>
+            <li><a href="documents/report.pdf">Отчёт</a></li>
+            <li><a href="images/photo.jpg">Фото</a></li>
+            <li><a href="documents/manual.docx">Инструкция</a></li>
+            <li><span>Простой текст (без ссылки)</span></li>
+            <li><a href="archive/backup.zip">Архив</a></li>
+        </ul>
+    </div>
+
+    <!-- Таблица moto_table -->
+    <h3>Таблица мотоциклов</h3>
+    <table id="moto_table" border="1">
+        <thead>
+            <tr>
+                <th>Модель</th>
+                <th>Объём (куб.см)</th>
+                <th>Год</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Yamaha R1</td><td>998</td><td>2022</td></tr>
+            <tr><td>Suzuki GSX-R1000</td><td>999</td><td>2021</td></tr>
+            <tr><td>Kawasaki Ninja ZX-10R</td><td>998</td><td>2023</td></tr>
+            <tr><td>Honda CBR1000RR</td><td>999</td><td>2020</td></tr>
+            <tr><td>Ducati Panigale V4</td><td>1103</td><td>2022</td></tr>
+            <tr><td>BMW S1000RR</td><td>999</td><td>2023</td></tr>
+        </tbody>
+    </table>
+
+    <div class="results">
+        <h3>Результаты выборок (смотрите консоль браузера)</h3>
+        <button id="showResults">Показать результаты в консоли</button>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
