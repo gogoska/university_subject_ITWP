@@ -1,0 +1,31 @@
+.container {
+    border: 2px solid rgb(228, 194, 0);
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.elem {
+    background-color: rgb(178, 218, 0);
+    width: 50px;
+    height: 30px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elem-1 {
+    height: 150px;
+    align-self: center;
+}
+
+.elem-4 {
+    height: 150px;
+    align-self: center;
+}
