@@ -1,0 +1,145 @@
+/* Основные стили сайта – только внешний вид, сетка Bootstrap остаётся нетронутой */
+body {
+    background: #f9f9f9;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    padding: 30px 0;
+}
+
+/* Контейнер блоков */
+.block {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;             /* чтобы все блоки в ряду были одинаковой высоты */
+}
+.block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+/* Цветовые темы для рядов */
+.row-first {
+    margin-bottom: 20px;
+}
+.row-second {
+    background: transparent;
+    margin-bottom: 20px;
+}
+.row-third {
+    margin-bottom: 10px;
+}
+
+/* Блоки-счётчики (первый ряд) */
+.counter-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c7da0;
+}
+.counter-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+/* Вложенные блоки услуг */
+.nested-block {
+    background: #f1f9ff;
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    height: 100%;
+    transition: 0.2s;
+}
+.nested-block i {
+    font-size: 32px;
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+.nested-block h4 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.nested-block p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* Стиль для растягивающегося блока (преимущества) – занимает всю высоту родителя */
+.advantage-block {
+    display: flex;
+    flex-direction: column;
+}
+.nested-block-empty {
+    background: #eaf7e8;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    flex: 1;                 /* растягивается на всю оставшуюся высоту */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nested-block-empty i {
+    font-size: 44px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+.nested-block-empty p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    background-color: #1e88e5;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #0b5e7e;
+}
+
+/* Блок контактов, соцсетей и партнёров */
+.contact-block i, .social-block i, .partners-block i {
+    margin-right: 8px;
+    color: #1e88e5;
+    width: 24px;
+}
+.social-block a {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 28px;
+    color: #555;
+    transition: 0.2s;
+}
+.social-block a:hover { color: #1e88e5; }
+.partners-block p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+.empty-space {
+    background: #eee;
+    color: #aaa;
+    text-align: center;
+    border: 1px dashed #ccc;
+}
+.note-xs {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* Адаптивные корректировки – не ломаем сетку, только отступы и шрифты */
+@media (max-width: 768px) {
+    .block {
+        padding: 12px;
+    }
+    .counter-number {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}

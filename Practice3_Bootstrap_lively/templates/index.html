@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio | Bootstrap 3 Вариант 4</title>
+    <!-- Bootstrap 3 (ваша локальная копия) -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <!-- FontAwesome 4.7 для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Первый ряд: 4 блока с цифрами (достижения) -->
+        <div class="row row-first">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="block counter-block">
+                    <div class="counter-number">128</div>
+                    <div class="counter-label">Проектов</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="block counter-block">
+                    <div class="counter-number">84</div>
+                    <div class="counter-label">Клиента</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="block counter-block">
+                    <div class="counter-number">15</div>
+                    <div class="counter-label">Наград</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="block counter-block">
+                    <div class="counter-number">10+</div>
+                    <div class="counter-label">Лет опыта</div>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-xs hidden-sm"></div> <!-- заглушка для сохранения сетки -->
+        </div>
+
+        <!-- Второй ряд: левая часть с услугами (вложенные блоки), правая часть – преимущества -->
+        <div class="row row-second">
+            <!-- Левый блок: услуги + вложенные блоки -->
+            <div class="col-xs-12 col-md-6">
+                <div class="block service-block">
+                    <h3>Наши услуги</h3>
+                    <div class="row nested-row">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <div class="nested-block">
+                                <i class="fa fa-paint-brush"></i>
+                                <h4>Веб-дизайн</h4>
+                                <p>Современный дизайн, адаптивная вёрстка.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 hidden-sm"> <!-- при sm блок исчезает -->
+                            <div class="nested-block">
+                                <i class="fa fa-code"></i>
+                                <h4>Разработка</h4>
+                                <p>Backend, фронтенд, базы данных.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="visible-sm-block text-muted note-xs">(На планшете второй вложенный блок скрыт)</p>
+                </div>
+            </div>
+            <!-- Правый блок: преимущества с растягивающимся элементом -->
+            <div class="col-xs-12 col-md-5 col-md-offset-1">
+                <div class="block advantage-block">
+                    <h3>Почему мы?</h3>
+                    <div class="nested-block-empty">
+                        <i class="fa fa-rocket"></i>
+                        <p>Работаем быстрее, чем вы думаете. Гарантируем качество и поддержку 24/7. Индивидуальный подход к каждому проекту.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Третий ряд: контакты, соцсети, партнёры + пустое пространство для xs -->
+        <div class="row row-third">
+            <!-- Основной блок контактов (на xs – скрыт, появляется пустой блок) -->
+            <div class="col-xs-5 col-md-5 hidden-xs">
+                <div class="block contact-block">
+                    <h3>Контакты</h3>
+                    <p><i class="fa fa-map-marker"></i> Минск, ул. Примерная 123</p>
+                    <p><i class="fa fa-phone"></i> +375 (29) 123-45-67</p>
+                    <p><i class="fa fa-envelope"></i> info@creativestudio.by</p>
+                </div>
+            </div>
+            <!-- Пустое пространство, видимое только на телефонах (xs) – требование варианта 4 -->
+            <div class="col-xs-5 visible-xs-block">
+                <div class="block empty-space">
+                    <i class="fa fa-eye-slash"></i> Пустое пространство
+                </div>
+            </div>
+
+            <!-- Блок социальных сетей (2 колонки) -->
+            <div class="col-xs-4 col-md-2">
+                <div class="block social-block">
+                    <h4>Мы в соцсетях</h4>
+                    <a href="#">facebook<i class="fa fa-facebook"></i></a>
+                    <a href="#">instagram<i class="fa fa-instagram"></i></a>
+                    <a href="#">telegram<i class="fa fa-telegram"></i></a>
+                </div>
+            </div>
+            <!-- Блок партнёров (2 колонки) -->
+            <div class="col-xs-3 col-md-3">
+                <div class="block partners-block">
+                    <h4>Партнёры</h4>
+                    <p>ООО «Техно», «Айти-лидер», EPAM</p>
+                </div>
+            </div>
+            <!-- Пустой блок, который ничего не отображает (по заданию) -->
+            <div class="col-md-2 col-sm-3 col-xs-0 hidden-xs"></div>
+        </div>
+    </div>
+</body>
+</html>
