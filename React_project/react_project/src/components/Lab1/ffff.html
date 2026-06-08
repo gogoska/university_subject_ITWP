@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматная доска с нотациями (HTML/CSS)</title>
+    <style>
+        /* Разрешённые стили только для цвета клеток и общего контейнера */
+        .chessboard-container {
+            display: inline-block;
+            background-color: #daa06a;
+            padding: 20px 10px 10px 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            user-select: none;
+        }
+
+        /* Контейнер для букв сверху и снизу */
+        .letters-row {
+            display: flex;
+            justify-content: center;
+
+            margin-right: 30px;
+        }
+        .letter-label {
+            width: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .corner {
+            width: 35px;
+        }
+
+        /* Боковые цифры и доска */
+        .board-wrapper {
+            display: flex;
+        }
+        .numbers-left, .numbers-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .numbers-left {
+            margin-right: 5px;
+        }
+        .numbers-right {
+            margin-left: 5px;
+        }
+        .number-label {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        /* Доска – grid 8x8, каждая клетка 50x50 */
+        .board {
+            display: grid;
+            grid-template-rows: repeat(8, 50px);
+            grid-template-columns: repeat(8, 50px);
+            border: 2px solid #333;
+        }
+
+        /* Клетки – только цвет, никаких дополнительных стилей */
+        .white {
+            background-color: #f0d9b5;
+        }
+        .black {
+            background-color: #b58863;
+        }
+    </style>
+</head>
+<body>
+    <div class="chessboard-container">
+        <!-- Верхний ряд с буквами -->
+        <div class="letters-row">
+            <div class="corner"></div>
+            <div class="letter-label">a</div>
+            <div class="letter-label">b</div>
+            <div class="letter-label">c</div>
+            <div class="letter-label">d</div>
+            <div class="letter-label">e</div>
+            <div class="letter-label">f</div>
+            <div class="letter-label">g</div>
+            <div class="letter-label">h</div>
+            <div class="corner"></div>
+        </div>
+
+        <div class="board-wrapper">
+            <!-- Левые цифры -->
+            <div class="numbers-left">
+                <div class="number-label">8</div>
+                <div class="number-label">7</div>
+                <div class="number-label">6</div>
+                <div class="number-label">5</div>
+                <div class="number-label">4</div>
+                <div class="number-label">3</div>
+                <div class="number-label">2</div>
+                <div class="number-label">1</div>
+            </div>
+
+            <!-- Сама доска -->
+            <div class="board">
+                <!-- Ряд 8 (верхний на картинке) -->
+                <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+                <!-- Ряд 7 -->
+                <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+                <!-- Ряд 6 -->
+                <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+                <!-- Ряд 5 -->
+                <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+                <!-- Ряд 4 -->
+                <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+                <!-- Ряд 3 -->
+                <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+                <!-- Ряд 2 -->
+                <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+                <!-- Ряд 1 -->
+                <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+            </div>
+
+            <!-- Правые цифры -->
+            <div class="numbers-right">
+                <div class="number-label">8</div>
+                <div class="number-label">7</div>
+                <div class="number-label">6</div>
+                <div class="number-label">5</div>
+                <div class="number-label">4</div>
+                <div class="number-label">3</div>
+                <div class="number-label">2</div>
+                <div class="number-label">1</div>
+            </div>
+        </div>
+
+        <!-- Нижний ряд с буквами -->
+        <div class="letters-row">
+            <div class="corner"></div>
+            <div class="letter-label">a</div>
+            <div class="letter-label">b</div>
+            <div class="letter-label">c</div>
+            <div class="letter-label">d</div>
+            <div class="letter-label">e</div>
+            <div class="letter-label">f</div>
+            <div class="letter-label">g</div>
+            <div class="letter-label">h</div>
+            <div class="corner"></div>
+        </div>
+    </div>
+</body>
+</html>

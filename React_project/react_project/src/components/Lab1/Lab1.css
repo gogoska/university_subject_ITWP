@@ -1,0 +1,77 @@
+.positive {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.negative {
+  color: #c62828;
+  font-weight: bold;
+}
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+
+/* Шахматная доска */
+.chessboard-container {
+    display: inline-block;
+    background-color: #daa06a;
+    padding: 20px 10px 10px 20px;
+    border-radius: 8px;
+    font-family: monospace;
+    user-select: none;
+}
+
+/* Контейнер для букв сверху и снизу */
+.letters-row {
+    display: flex;
+    justify-content: center;
+
+    margin-right: 30px;
+}
+.letter-label {
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.corner {
+    width: 35px;
+}
+
+/* Боковые цифры и доска */
+.board-wrapper {
+    display: flex;
+}
+.numbers-left, .numbers-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.numbers-left {
+    margin-right: 5px;
+}
+.numbers-right {
+    margin-left: 5px;
+}
+.number-label {
+    height: 50px;
+    line-height: 50px;
+}
+
+/* Доска – grid 8x8, каждая клетка 50x50 */
+.board {
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(8, 50px);
+    border: 2px solid #333;
+}
+
+/* Клетки – только цвет, никаких дополнительных стилей */
+.white {
+    background-color: #f0d9b5;
+}
+.black {
+    background-color: #b58863;
+}
