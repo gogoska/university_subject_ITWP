@@ -1,0 +1,106 @@
+/* src/labs/Lab3/Lab3.css */
+
+/* EmailForm */
+.email-form-container {
+    background: #f5f7fa;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 400px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.email-form-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #34495e;
+}
+.email-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+.message {
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ProductCatalog */
+.catalog-container {
+    background: white;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.catalog-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.catalog-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.catalog-table th, .catalog-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+.catalog-table th {
+    background-color: #e9ecef;
+    cursor: pointer;
+    user-select: none;
+}
+.catalog-table th:hover {
+    background-color: #dee2e6;
+}
+/* Цветовые выделения */
+.zero-quantity {
+    background-color: #f8d7da !important; /* красный */
+}
+.low-quantity {
+    background-color: #fff3cd !important; /* жёлтый */
+}
+.summary {
+    margin-top: 20px;
+    padding: 12px;
+    background: #e9ecef;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+.summary p {
+    margin: 6px 0;
+}
