@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №12 (Bootstrap 3, Вариант 4)</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ПЕРВЫЙ РЯД -->
+        <div class="row row-first">
+            <div class="col-md-1">
+                <div class="block">Блок 1<br>(col-md-1)</div>
+            </div>
+            <div class="col-md-1">
+                <div class="block">Блок 2<br>(col-md-1)</div>
+            </div>
+            <div class="col-md-1">
+                <div class="block">Блок 3<br>(col-md-1)</div>
+            </div>
+            <div class="col-md-1">
+                <div class="block">Блок 4<br>(col-md-1)</div>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+
+        <!-- ВТОРОЙ РЯД: -->
+        <div class="row row-second">
+            <!-- Блок 1 -->
+            <div class="col-md-6">
+                <div class="block">
+                    <strong>Блок 1</strong>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-6">
+                            <div class="nested-block">Вложенный блок 1<br>(3 глобальные колонки)</div>
+                        </div>
+                        <div class="col-md-6 hidden-sm">   <!-- при sm (планшет) скрываем второй вложенный блок -->
+                            <div class="nested-block">Вложенный блок 2<br>(3 глобальные колонки)</div>
+                        </div>
+                    </div>
+                    <p class="visible-sm-block text-muted" style="margin-top:8px;">(На планшете второй вложенный блок исчезает)</p>
+                </div>
+            </div>
+            <!-- Блок 2 -->
+            <div class="col-md-5 col-md-offset-1">
+                <div class="block">
+                    <strong>Блок 2</strong>
+                    <div class="nested-block-empty"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ТРЕТИЙ РЯД -->
+        <div class="row row-third">
+            <!-- Блок 1 -->
+            <div class=" col-xs-5 col-md-5 hidden-xs">
+                <div class="block">Блок 1<br>(col-md-5)</div>
+            </div>
+            <!-- Блок 2 -->
+            <div class="col-xs-offset-5 col-md-offset-0 col-sm-offset-0 col-xs-2 col-md-2">
+                <div class="block">Блок 2<br>(col-md-2)</div>
+            </div>
+            <!-- Блок 3 -->
+            <div class="col-xs-2 col-md-2">
+                <div class="block">Блок 3<br>(col-md-2)</div>
+            </div>
+            <!-- Пустой блок -->
+            <div class="col-md-3 col-sm-3 col-xs-3"></div>
+        </div>
+    </div>
+</body>
+</html>
